@@ -1,11 +1,14 @@
 language: dart
-sudo: required
-dist: trusty
-dart:
-  - stable
-  - dev
-before_script:
-  - pub run tekartik_travis_ci_flutter:install
-  - source $(pub run tekartik_travis_ci_flutter:env)
+dist: xenial
+addons:
+  apt:
+    packages:
+      - lib32stdc++6
+install:
+  - git clone https://github.com/flutter/flutter.git -b stable
+  - ./flutter/bin/flutter doctor
 script:
-  - dart tool/travis.dart
+  - ./flutter/bin/flutter test
+cache:
+  directories:
+    - $HOME/.pub-cache
