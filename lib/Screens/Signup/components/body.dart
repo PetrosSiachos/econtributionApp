@@ -8,6 +8,15 @@ import 'package:econtribution/components/rounded_button.dart';
 import 'package:econtribution/components/rounded_input_field.dart';
 import 'package:econtribution/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:econtribution/Screens/home/home-screen.dart';
+import 'package:econtribution/Screens/home/components/app_bar.dart';
+import 'package:econtribution/Screens/home/components/body.dart';
+import 'package:econtribution/Screens/home/components/category_item.dart';
+import 'package:econtribution/Screens/home/components/category_list.dart';
+import 'package:econtribution/Screens/home/components/discount_card.dart';
+import 'package:econtribution/Screens/home/components/item_card.dart';
+import 'package:econtribution/Screens/home/components/item_list.dart';
+
 
 class Body extends StatelessWidget {
   @override
@@ -58,7 +67,15 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 SocalIcon(
                   iconSrc: "assets/icons/facebook.svg",
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );},
                 ),
                 SocalIcon(
                   iconSrc: "assets/icons/twitter.svg",
