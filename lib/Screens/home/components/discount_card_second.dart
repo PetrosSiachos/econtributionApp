@@ -1,26 +1,29 @@
 import 'package:econtribution/Screens/details/components/bodo.dart';
+import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:econtribution/constants.dart';
 import 'package:econtribution/screens/details/details-screen.dart';
 import 'package:econtribution/screens/home/components/item_card.dart';
 
 
-class ItemList extends StatelessWidget {
-  const ItemList({
+class Dis extends StatelessWidget {
+  const Dis({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
+
       child:
       Row(
         children: <Widget>[
-          ItemCard(
-            svgSrc: "assets/images/dog.png",
+          ItemCards(
+            svgSrc: "assets/images/bear.png",
             title: "Molly",
             press: () {
-              Bodo.a="dog.png";
+              Bodo.a="bear.png";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -31,11 +34,11 @@ class ItemList extends StatelessWidget {
               );
             },
           ),
-          ItemCard(
-            svgSrc: "assets/images/parrot.png",
+          ItemCards(
+            svgSrc: "assets/images/brown.png",
             title: "Peter",
             press: () {
-              Bodo.a="parrot.png";
+              Bodo.a="brown.png";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -46,22 +49,8 @@ class ItemList extends StatelessWidget {
               );
             },
           ),
-          ItemCard(
-            svgSrc: "assets/images/turtle.png",
-            title: "Andrew",
-            press: () {
-              Bodo.a="turtle.png";
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return DetailsScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          ],
+
+        ],
       ),
     );
   }

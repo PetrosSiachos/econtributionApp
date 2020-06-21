@@ -1,6 +1,11 @@
+import 'package:econtribution/Screens/details/components/bodo.dart';
+import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:econtribution/constants.dart';
+import 'package:econtribution/screens/details/details-screen.dart';
+import 'package:econtribution/screens/home/components/item_card.dart';
+
 
 class DiscountCard extends StatelessWidget {
   const DiscountCard({
@@ -9,73 +14,42 @@ class DiscountCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+    return SingleChildScrollView(
+
+      child:
+      Row(
         children: <Widget>[
-          Text(
-            "Offers & Discounts",
-            style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
-          ),
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
-            width: double.infinity,
-            height: 166,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/images/beyond-meat-mcdonalds.png"),
-              ),
-            ),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFFFF961F).withOpacity(0.7),
-                    kPrimaryColor.withOpacity(0.7),
-                  ],
+          ItemCards(
+            svgSrc: "assets/images/tree.png",
+            title: "Molly",
+            press: () {
+              Bodo.a="tree.png";
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailsScreen();
+                  },
                 ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: SvgPicture.asset("assets/icons/macdonalds.svg"),
-                    ),
-                    Expanded(
-                      child: RichText(
-                        text: TextSpan(
-                          style: TextStyle(color: Colors.white),
-                          children: [
-                            TextSpan(
-                              text: "Get Discount of \n",
-                              style: TextStyle(fontSize: 16),
-                            ),
-                            TextSpan(
-                              text: "30% \n",
-                              style: TextStyle(
-                                fontSize: 43,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            TextSpan(
-                              text:
-                                  "at MacDonald's on your first order & Instant cashback",
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+              );
+            },
           ),
+          ItemCards(
+            svgSrc: "assets/images/close.jpg",
+            title: "Peter",
+            press: () {
+              Bodo.a="close.jpg";
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailsScreen();
+                  },
+                ),
+              );
+            },
+          ),
+
         ],
       ),
     );

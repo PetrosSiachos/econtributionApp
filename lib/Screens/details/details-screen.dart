@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:econtribution/constants.dart';
 import 'package:econtribution/screens/details/components/app_bar.dart';
-import 'package:econtribution/screens/details/components/body.dart';
+
+import 'package:econtribution/Screens/details/components/bodo.dart';
+
 
 class DetailsScreen extends StatelessWidget {
   @override
@@ -9,7 +11,7 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: detailsAppBar(),
-      body: Body(),
+      body: Bodo(),
     );
   }
 }
