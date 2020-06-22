@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1073677012327",
+    "firebase_url": "https://econtribution-8fa25.firebaseio.com",
+    "project_id": "econtribution-8fa25",
+    "storage_bucket": "econtribution-8fa25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073677012327:android:46227834cfd6549e17f3c2",
+        "android_client_info": {
+          "package_name": "com.econtribution.econtribution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073677012327-injq89ucg270cnuvi64sqncbkthatdn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9Mad190u7F-9VoeL2j-5qKhSQRegSKlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073677012327-injq89ucg270cnuvi64sqncbkthatdn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:econtribution/constants.dart';
 
 class ItemCard extends StatelessWidget {
   final String title, svgSrc;
@@ -43,9 +41,9 @@ class ItemCard extends StatelessWidget {
                   ),
                   child: Image.asset(
                     svgSrc,
-                      width: 150,
-                      height: 150,
-                      fit: BoxFit.fitWidth,
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.fitWidth,
                   ),
                 ),
                 Text(

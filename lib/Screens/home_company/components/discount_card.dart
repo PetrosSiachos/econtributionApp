@@ -1,11 +1,14 @@
-import 'package:econtribution/Screens/details/components/bodo.dart';
+import 'package:econtribution/Screens/details_company/components/bodi.dart';
+import 'package:econtribution/Screens/details_company/details-screen.dart';
 import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:flutter/material.dart';
-import 'package:econtribution/screens/details/details-screen.dart';
 
-class DiscountCard extends StatelessWidget {
-  const DiscountCard({
-    Key key,
+
+
+class DiscountCardB extends StatelessWidget {
+  static String okfirst;
+  const DiscountCardB({
+    Key key, String okfirst,
   }) : super(key: key);
 
   @override
@@ -16,30 +19,32 @@ class DiscountCard extends StatelessWidget {
       Row(
         children: <Widget>[
           ItemCards(
-            svgSrc: "assets/images/tree.png",
-            title: "Molly",
+            svgSrc: "assets/images/nike.jpg",
+            title: "nike",
             press: () {
-              Bodo.a="tree.png";
+              Bodi.a="nike.jpg";
+              Bodi.first = okfirst;
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetailsScreen();
+                    return DetailsScreenB();
                   },
                 ),
               );
             },
           ),
           ItemCards(
-            svgSrc: "assets/images/close.jpg",
+            svgSrc: "assets/images/toms.jpg",
             title: "Peter",
             press: () {
-              Bodo.a="close.jpg";
+              Bodi.a="toms.jpg";
+              Bodi.first = okfirst;
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetailsScreen();
+                    return DetailsScreenB();
                   },
                 ),
               );

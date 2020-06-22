@@ -1,11 +1,7 @@
 import 'package:econtribution/Screens/details/components/bodo.dart';
 import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:econtribution/constants.dart';
 import 'package:econtribution/screens/details/details-screen.dart';
-import 'package:econtribution/screens/home/components/item_card.dart';
-
 
 class Dis extends StatelessWidget {
   const Dis({

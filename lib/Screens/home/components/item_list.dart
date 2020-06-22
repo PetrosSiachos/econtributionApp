@@ -1,7 +1,8 @@
 import 'package:econtribution/Screens/details/components/bodo.dart';
+import 'package:econtribution/Screens/home/components/item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:econtribution/screens/details/details-screen.dart';
-import 'package:econtribution/screens/home/components/item_card.dart';
+
 
 
 class ItemList extends StatelessWidget {

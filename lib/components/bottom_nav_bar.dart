@@ -35,11 +35,11 @@ class BottomNavBar extends StatelessWidget {
             onPressed: () {},
           ),
           IconButton(
-            icon: SvgPicture.asset("assets/icons/Following.svg"),
+            icon: SvgPicture.asset("assets/icons/Glyph.svg"),
             onPressed: () {},
           ),
           IconButton(
-            icon: SvgPicture.asset("assets/icons/Glyph.svg"),
+            icon: SvgPicture.asset("assets/icons/Following.svg"),
             onPressed: () {},
           ),
           IconButton(

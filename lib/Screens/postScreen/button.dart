@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:econtribution/constants.dart';
 
-class OrderButton extends StatelessWidget {
-  const OrderButton({
+class Button extends StatelessWidget {
+  const Button({
     Key key,
-    @required this.size,
+
     this.press,
   }) : super(key: key);
 
-  final Size size;
+
   final Function press;
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       // padding: EdgeInsets.all(20),
       width: size.width * 0.8,
@@ -31,10 +32,10 @@ class OrderButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/Following.svg"),
+                SvgPicture.asset("assets/icons/more.svg"),
                 SizedBox(width: 10),
                 Text(
-                  "ΣΤΗΡΙΞΕ ΤΗ ΔΡΑΣΗ",
+                  "ΚΟΙΝΟΠΟΙΗΣΗ",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

@@ -7,16 +7,7 @@ import 'package:econtribution/components/already_have_an_account_acheck.dart';
 import 'package:econtribution/components/rounded_button.dart';
 import 'package:econtribution/components/rounded_input_field.dart';
 import 'package:econtribution/components/rounded_password_field.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:econtribution/Screens/home/home-screen.dart';
-import 'package:econtribution/Screens/home/components/app_bar.dart';
-import 'package:econtribution/Screens/home/components/body.dart';
-import 'package:econtribution/Screens/home/components/category_item.dart';
-import 'package:econtribution/Screens/home/components/category_list.dart';
-import 'package:econtribution/Screens/home/components/discount_card.dart';
-import 'package:econtribution/Screens/home/components/item_card.dart';
-import 'package:econtribution/Screens/home/components/item_list.dart';
-
 
 class Body extends StatelessWidget {
   @override
@@ -32,9 +23,10 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              "assets/icons/signup.svg",
-              height: size.height * 0.35,
+            Image.asset(
+              "assets/images/logo.png",
+              width: 150,
+              height: 150,
             ),
             RoundedInputField(
               hintText: "Your Email",

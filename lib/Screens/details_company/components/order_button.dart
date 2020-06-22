@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:econtribution/constants.dart';
 
-class OrderButton extends StatelessWidget {
-  const OrderButton({
+class OrderButtonB extends StatelessWidget {
+  const OrderButtonB({
     Key key,
     @required this.size,
     this.press,
@@ -31,10 +31,10 @@ class OrderButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/Following.svg"),
+                SvgPicture.asset("assets/icons/person.svg"),
                 SizedBox(width: 10),
                 Text(
-                  "ΣΤΗΡΙΞΕ ΤΗ ΔΡΑΣΗ",
+                  "ΕΠΙΛΕΞΕ ΤΟΝ ΧΟΡΗΓΟ",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

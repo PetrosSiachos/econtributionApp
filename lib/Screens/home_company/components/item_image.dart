@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-
-class ItemCards extends StatelessWidget {
+class ItemCardsB extends StatelessWidget {
   final String title, svgSrc;
   final Function press;
-  const ItemCards({
+  const ItemCardsB({
     Key key,
     this.title,
     this.svgSrc,

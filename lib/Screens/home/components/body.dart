@@ -2,8 +2,6 @@ import 'package:econtribution/Screens/details/components/bodo.dart';
 import 'package:econtribution/Screens/home/components/discount_card_second.dart';
 import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:flutter/material.dart';
-import 'package:econtribution/components/search_box.dart';
-import 'package:econtribution/screens/home/components/category_list.dart';
 import 'package:econtribution/screens/home/components/discount_card.dart';
 import 'package:econtribution/screens/home/components/item_list.dart';
 import 'package:econtribution/constants.dart';
@@ -17,10 +15,7 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          SearchBox(
-            onChanged: (value) {},
-          ),
-          CategoryList(),
+          //Image.asset(),
           Text("     ΒΟΗΘΗΣΕ ΤΩΡΑ", style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor), ),
           ItemList(),
           Text(
@@ -61,7 +56,7 @@ class Body extends StatelessWidget {
                   );
                 },
               ),
-          ],
+            ],
           ),
           Dis(),
         ],

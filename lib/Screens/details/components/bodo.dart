@@ -1,3 +1,4 @@
+import 'package:econtribution/Screens/home_company/home-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:econtribution/constants.dart';
 import 'package:econtribution/screens/details/components/item_image.dart';
@@ -103,7 +104,18 @@ class ItemInfo extends StatelessWidget {
           // Free space  10% of total height
           OrderButton(
             size: size,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return HomeScreenB(
+                      ok: ok,
+                    );
+                  },
+                ),
+              );
+            },
           )
         ],
       ),
