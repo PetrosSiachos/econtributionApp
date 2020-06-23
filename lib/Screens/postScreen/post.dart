@@ -4,32 +4,29 @@ import 'package:econtribution/components/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class Post extends StatelessWidget {
-  final String first;
-  final String second;
-  const Post({
-    Key key, this.first, this.second,
-  }) : super(key: key);
+  static String first;
+  static String second;
+  String path = "assets/InstaStory/" + first + second + ".png";
 
   @override
   Widget build(BuildContext context) {
-    ///final String path = first + second + ".png";
     return new Scaffold(
       appBar: homeAppBar(context),
       bottomNavigationBar: BottomNavBar(),
       body: new Column(
         children: <Widget>[
           Image.asset(
-              "assets/images/bar1.png",
-           width: 1000,
-            height: 10,
+            "assets/images/bar3.png",
+            width:500,
+            height: 150,
           ),
           Image.asset(
-              "assets/images/trash.png",
+              path,
             width: 400,
-            height: 450,
+            height: 310,
           ),
 
-          Button(),
+         Button(),
 
         ],
       ),

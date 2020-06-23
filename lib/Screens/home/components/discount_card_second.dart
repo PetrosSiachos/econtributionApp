@@ -19,7 +19,7 @@ class Dis extends StatelessWidget {
             svgSrc: "assets/images/bear.png",
             title: "Molly",
             press: () {
-              Bodo.a="bear.png";
+              Bodo.a="bear";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -34,7 +34,7 @@ class Dis extends StatelessWidget {
             svgSrc: "assets/images/brown.png",
             title: "Peter",
             press: () {
-              Bodo.a="brown.png";
+              Bodo.a="brown";
               Navigator.push(
                 context,
                 MaterialPageRoute(

@@ -15,7 +15,11 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          //Image.asset(),
+          Image.asset(
+              "assets/images/bar1.png",
+                  width:500,
+                  height: 150,
+          ),
           Text("     ΒΟΗΘΗΣΕ ΤΩΡΑ", style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor), ),
           ItemList(),
           Text(
@@ -29,7 +33,7 @@ class Body extends StatelessWidget {
                 svgSrc: "assets/images/plastics.png",
                 title: "Molly",
                 press: () {
-                  Bodo.a="plastics.png";
+                  Bodo.a="plastics";
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -45,7 +49,7 @@ class Body extends StatelessWidget {
                 svgSrc: "assets/images/trash.png",
                 title: "Peter",
                 press: () {
-                  Bodo.a="trash.png";
+                  Bodo.a="trash";
                   Navigator.push(
                     context,
                     MaterialPageRoute(

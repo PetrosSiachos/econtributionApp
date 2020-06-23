@@ -4,9 +4,9 @@ import 'package:econtribution/Screens/home_company/components/item_image.dart';
 import 'package:flutter/material.dart';
 
 class DisB extends StatelessWidget {
-  static String okfirst;
+  final String okfirst;
   const DisB({
-    Key key, String okfirst,
+    Key key, this.okfirst,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class DisB extends StatelessWidget {
             svgSrc: "assets/images/ice.jpg",
             title: "Molly",
             press: () {
-              Bodi.a="ice.jpg";
+              Bodi.a="ice";
               Bodi.first = okfirst;
               Navigator.push(
                 context,
@@ -36,7 +36,7 @@ class DisB extends StatelessWidget {
             svgSrc: "assets/images/city.png",
             title: "Peter",
             press: () {
-              Bodi.a="city.png";
+              Bodi.a="city";
               Bodi.first = okfirst;
               Navigator.push(
                 context,

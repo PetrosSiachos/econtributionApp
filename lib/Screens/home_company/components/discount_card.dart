@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 
 
 class DiscountCardB extends StatelessWidget {
-  static String okfirst;
+  final String okfirst;
   const DiscountCardB({
-    Key key, String okfirst,
+    Key key, this.okfirst,
   }) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class DiscountCardB extends StatelessWidget {
             svgSrc: "assets/images/nike.jpg",
             title: "nike",
             press: () {
-              Bodi.a="nike.jpg";
+              Bodi.a="nike";
               Bodi.first = okfirst;
               Navigator.push(
                 context,
@@ -38,7 +38,7 @@ class DiscountCardB extends StatelessWidget {
             svgSrc: "assets/images/toms.jpg",
             title: "Peter",
             press: () {
-              Bodi.a="toms.jpg";
+              Bodi.a="toms";
               Bodi.first = okfirst;
               Navigator.push(
                 context,

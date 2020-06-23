@@ -21,7 +21,7 @@ class ItemList extends StatelessWidget {
             svgSrc: "assets/images/dog.png",
             title: "Molly",
             press: () {
-              Bodo.a="dog.png";
+              Bodo.a="dog";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -36,7 +36,7 @@ class ItemList extends StatelessWidget {
             svgSrc: "assets/images/parrot.png",
             title: "Peter",
             press: () {
-              Bodo.a="parrot.png";
+              Bodo.a="parrot";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -51,7 +51,7 @@ class ItemList extends StatelessWidget {
             svgSrc: "assets/images/turtle.png",
             title: "Andrew",
             press: () {
-              Bodo.a="turtle.png";
+              Bodo.a="turtle";
               Navigator.push(
                 context,
                 MaterialPageRoute(

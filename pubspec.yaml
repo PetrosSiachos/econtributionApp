@@ -29,6 +29,7 @@ dependencies:
   cloud_firestore: ^0.12.9+4
   provider: ^3.1.0
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -47,6 +48,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/InstaStory/
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

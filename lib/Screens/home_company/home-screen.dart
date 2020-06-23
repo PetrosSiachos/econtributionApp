@@ -11,7 +11,7 @@ class HomeScreenB extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+   return Scaffold(
       appBar: homeAppBar(context),
       bottomNavigationBar: BottomNavBar(),
       body: Boda(

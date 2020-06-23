@@ -1,19 +1,12 @@
-import 'package:econtribution/Screens/details/components/bodo.dart';
 import 'package:econtribution/Screens/details_company/components/bodi.dart';
 import 'package:econtribution/Screens/details_company/details-screen.dart';
-import 'package:econtribution/Screens/home/components/discount_card_second.dart';
-import 'package:econtribution/Screens/home/components/item_image.dart';
 import 'package:econtribution/Screens/home_company/components/discount_card.dart';
 import 'package:econtribution/Screens/home_company/components/discount_card_second.dart';
 import 'package:econtribution/Screens/home_company/components/item_image.dart';
 import 'package:econtribution/Screens/home_company/components/item_list.dart';
 import 'package:flutter/material.dart';
-import 'package:econtribution/components/search_box.dart';
-import 'package:econtribution/screens/home/components/category_list.dart';
-import 'package:econtribution/screens/home/components/discount_card.dart';
-import 'package:econtribution/screens/home/components/item_list.dart';
 import 'package:econtribution/constants.dart';
-import 'package:econtribution/screens/details/details-screen.dart';
+
 
 class Boda extends StatelessWidget {
   final String okfirst;
@@ -27,9 +20,11 @@ class Boda extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          //Image.asset(
-            //  "assets/images/bar1.png"
-         // ),
+          Image.asset(
+            "assets/images/bar2.png",
+            width:500,
+            height: 150,
+          ),
           Text("     ΕΠΙΛΕΞΕ ΧΟΡΗΓΟ", style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor), ),
           ItemListB(
             okfirst: okfirst,
@@ -47,7 +42,7 @@ class Boda extends StatelessWidget {
                 svgSrc: "assets/images/six_dogs.jpg",
                 title: "Molly",
                 press: () {
-                  Bodi.a="six_dogs.jpg";
+                  Bodi.a="six_dogs";
                   Bodi.first = okfirst;
                   Navigator.push(
                     context,
@@ -64,7 +59,7 @@ class Boda extends StatelessWidget {
                 svgSrc: "assets/images/zara.jpg",
                 title: "Peter",
                 press: () {
-                  Bodi.a="zara.jpg";
+                  Bodi.a="zara";
                   Bodi.first = okfirst;
                   Navigator.push(
                     context,

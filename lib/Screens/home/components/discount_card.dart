@@ -19,7 +19,7 @@ class DiscountCard extends StatelessWidget {
             svgSrc: "assets/images/tree.png",
             title: "Molly",
             press: () {
-              Bodo.a="tree.png";
+              Bodo.a="tree";
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -34,7 +34,7 @@ class DiscountCard extends StatelessWidget {
             svgSrc: "assets/images/close.jpg",
             title: "Peter",
             press: () {
-              Bodo.a="close.jpg";
+              Bodo.a="close";
               Navigator.push(
                 context,
                 MaterialPageRoute(

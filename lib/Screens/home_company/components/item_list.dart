@@ -6,14 +6,14 @@ import 'package:econtribution/screens/home/components/item_card.dart';
 
 
 class ItemListB extends StatelessWidget {
-  static String okfirst;
+  final String okfirst;
   const ItemListB({
-    Key key , String okfirst,
+    Key key , this.okfirst,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+   return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child:
       Row(
@@ -22,7 +22,7 @@ class ItemListB extends StatelessWidget {
             svgSrc: "assets/images/Marvel.jpg",
             title: "Marvel",
             press: () {
-              Bodi.a="Marvel.jpg";
+              Bodi.a="Marvel";
               Bodi.first = okfirst;
               Navigator.push(
                 context,
@@ -38,7 +38,7 @@ class ItemListB extends StatelessWidget {
             svgSrc: "assets/images/starbucks.png",
             title: "Starbucks",
             press: () {
-              Bodi.a="starbucks.png";
+              Bodi.a="starbucks";
               Bodi.first = okfirst;
               Navigator.push(
                 context,
@@ -54,7 +54,7 @@ class ItemListB extends StatelessWidget {
             svgSrc: "assets/images/tesla.png",
             title: "Tesla",
             press: () {
-              Bodi.a="tesla.png";
+              Bodi.a="tesla";
               Bodi.first = okfirst;
               Navigator.push(
                 context,
