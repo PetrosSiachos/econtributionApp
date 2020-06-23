@@ -1,5 +1,5 @@
+import 'package:econtribution/Screens/Login/components/body.dart';
 import 'package:flutter/material.dart';
-import 'package:econtribution/Screens/Login/login_screen.dart';
 import 'package:econtribution/Screens/Signup/signup_screen.dart';
 import 'package:econtribution/Screens/Welcome/components/background.dart';
 import 'package:econtribution/components/rounded_button.dart';
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return LoginPage();
                     },
                   ),
                 );

@@ -31,7 +31,7 @@ class OrderButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/Following.svg"),
+                //SvgPicture.asset("assets/icons/Following.svg"),
                 SizedBox(width: 10),
                 Text(
                   "ΣΤΗΡΙΞΕ ΤΗ ΔΡΑΣΗ",

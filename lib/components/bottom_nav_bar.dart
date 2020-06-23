@@ -1,3 +1,5 @@
+import 'package:econtribution/Screens/Welcome/welcome_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -44,10 +46,21 @@ class BottomNavBar extends StatelessWidget {
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/person.svg"),
-            onPressed: () {},
+            onPressed: _signOut,
           ),
         ],
       ),
     );
   }
-}
+  Future<void> _signOut() async {
+
+      await FirebaseAuth.instance.signOut();
+      runApp(
+      new MaterialApp(
+        home: new WelcomeScreen(),
+      )
+      );
+
+    }
+  }
+

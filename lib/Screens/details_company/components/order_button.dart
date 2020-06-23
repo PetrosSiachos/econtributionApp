@@ -31,7 +31,7 @@ class OrderButtonB extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/person.svg"),
+                //SvgPicture.asset("assets/icons/person.svg"),
                 SizedBox(width: 10),
                 Text(
                   "ΕΠΙΛΕΞΕ ΤΟΝ ΧΟΡΗΓΟ",

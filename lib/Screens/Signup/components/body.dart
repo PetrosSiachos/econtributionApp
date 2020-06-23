@@ -1,3 +1,4 @@
+import 'package:econtribution/Screens/Login/components/body.dart';
 import 'package:flutter/material.dart';
 import 'package:econtribution/Screens/Login/login_screen.dart';
 import 'package:econtribution/Screens/Signup/components/background.dart';
@@ -8,13 +9,23 @@ import 'package:econtribution/components/rounded_button.dart';
 import 'package:econtribution/components/rounded_input_field.dart';
 import 'package:econtribution/components/rounded_password_field.dart';
 import 'package:econtribution/Screens/home/home-screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class Body extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
+  @override
+  Body createState() => Body();
+}
+
+class Body extends State<SignUpPage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  String _email, _password;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Background(
-      child: SingleChildScrollView(
+    return Scaffold(
+      body: Form(
+        key: _formKey,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -24,20 +35,36 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.03),
             Image.asset(
-              "assets/images/logo.png",
-              width: 150,
-              height: 150,
+             "assets/images/logo.png",
+             width: 50,
+              height: 50,
+           ),
+            TextFormField(
+              validator: (input) {
+                if(input.isEmpty){
+                  return 'Provide an email';
+                }
+              },
+              decoration: InputDecoration(
+                  labelText: 'Email'
+              ),
+              onSaved: (input) => _email = input,
             ),
-            RoundedInputField(
-              hintText: "Your Email",
-              onChanged: (value) {},
+            TextFormField(
+              validator: (input) {
+                if(input.length < 6){
+                  return 'Longer password please';
+                }
+              },
+              decoration: InputDecoration(
+                  labelText: 'Password'
+              ),
+              onSaved: (input) => _password = input,
+              obscureText: true,
             ),
-            RoundedPasswordField(
-              onChanged: (value) {},
-            ),
-            RoundedButton(
-              text: "SIGNUP",
-              press: () {},
+            RaisedButton(
+              onPressed: signUp,
+              child: Text('Sign up'),
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
@@ -84,4 +111,17 @@ class Body extends StatelessWidget {
       ),
     );
   }
+
+  void signUp() async {
+    if(_formKey.currentState.validate()){
+      _formKey.currentState.save();
+      try{
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password);
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+      }catch(e){
+        print(e.message);
+      }
+    }
+  }
+
 }
