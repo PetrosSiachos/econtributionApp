@@ -1,4 +1,4 @@
-import 'package:econtribution/Screens/home/components/app_bar.dart';
+import 'package:econtribution/components/app_bar.dart';
 import 'package:econtribution/Screens/postScreen/button.dart';
 import 'package:econtribution/components/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';

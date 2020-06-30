@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:econtribution/constants.dart';
+import 'package:econtribution/components/Community.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;

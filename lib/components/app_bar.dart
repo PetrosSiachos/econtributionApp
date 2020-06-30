@@ -1,8 +1,9 @@
-import 'file:///C:/Users/Visitor/AndroidStudioProjects/econtribution/lib/search_news/search.dart';
-import 'package:econtribution/components/MenuList.dart';
+import 'package:econtribution/search_news/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:econtribution/constants.dart';
+
+import 'MenuList.dart';
 
 
 AppBar homeAppBar(BuildContext context) {

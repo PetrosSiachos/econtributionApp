@@ -1,7 +1,7 @@
 import 'package:econtribution/Screens/details_company/components/bodi.dart';
 import 'package:flutter/material.dart';
 import 'package:econtribution/constants.dart';
-import 'package:econtribution/screens/details/components/app_bar.dart';
+
 
 class DetailsScreenB extends StatelessWidget {
   static String okfirst;
@@ -9,7 +9,7 @@ class DetailsScreenB extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: detailsAppBar(),
+      appBar: AppBar(),
       body: Bodi(),
     );
   }

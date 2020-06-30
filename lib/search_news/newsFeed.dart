@@ -9,14 +9,14 @@ class newsFeed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
+            margin: EdgeInsets.symmetric(vertical: 0),
             width: double.infinity,
-            height: 166,
+            height: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
@@ -44,11 +44,11 @@ class newsFeed extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Χάθηκε το \n",
+                              text: "Οτιδήποτε θελήσεις \n",
                               style: TextStyle(fontSize: 16),
                             ),
                             TextSpan(
-                              text: "30% \n",
+                              text: "Αναζήτησε το \n",
                               style: TextStyle(
                                 fontSize: 43,
                                 fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class newsFeed extends StatelessWidget {
                             ),
                             TextSpan(
                               text:
-                              "του μαγευτικού δάσους απο πυρκαγιά",
+                              "με βάση τις κατηγορίες που είναι διαθέσιμες παραπάνω",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],

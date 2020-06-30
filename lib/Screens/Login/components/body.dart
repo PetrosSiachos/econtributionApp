@@ -1,12 +1,9 @@
 import 'package:econtribution/Screens/home/home-screen.dart';
 import 'package:flutter/material.dart';
-import 'package:econtribution/Screens/Login/components/background.dart';
 import 'package:econtribution/Screens/Signup/signup_screen.dart';
 import 'package:econtribution/components/already_have_an_account_acheck.dart';
-import 'package:econtribution/components/rounded_button.dart';
-import 'package:econtribution/components/rounded_input_field.dart';
-import 'package:econtribution/components/rounded_password_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:econtribution/constants.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,15 +26,15 @@ class Body extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: size.height * 0.03),
+            //Text(
+              //"LOGIN",
+             // style: TextStyle(fontWeight: FontWeight.bold),
+            //),
+            //SizedBox(height: size.height * 0.03),
             Image.asset(
-              "assets/images/logo.png",
-              width: 100,
-              height: 100,
+              "assets/images/Login.png",
+              width: 500,
+              height: 150,
               ),
             SizedBox(height: size.height * 0.03),
             TextFormField(
@@ -63,8 +60,8 @@ class Body extends State<LoginPage> {
               onSaved: (input) => _password = input,
               obscureText: true,
             ),
-            RaisedButton(
-
+              FlatButton(
+                color: kTextLightColor,
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
               onPressed: signIn,
               child: Text('Sign in'),

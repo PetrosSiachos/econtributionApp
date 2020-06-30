@@ -1,7 +1,9 @@
-import 'package:econtribution/Screens/Welcome/welcome_screen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:econtribution/Newsappi/main.dart';
+import 'package:econtribution/Screens/home/home-screen.dart';
+import 'package:econtribution/components/userProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:econtribution/components/Community.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -34,33 +36,59 @@ class BottomNavBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: SvgPicture.asset("assets/icons/home.svg"),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset("assets/icons/Glyph.svg"),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return HomeScreen();
+                  },
+                ),
+              );
+            },
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/Following.svg"),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Community();
+                  },
+                ),
+              );
+            },
+          ),
+          IconButton(
+            icon: SvgPicture.asset("assets/icons/Glyph.svg"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return NewsApp();
+                  },
+                ),
+              );
+            },
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/person.svg"),
-            onPressed: _signOut,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Profile();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
     );
   }
-  Future<void> _signOut() async {
-
-      await FirebaseAuth.instance.signOut();
-      runApp(
-      new MaterialApp(
-        home: new WelcomeScreen(),
-      )
-      );
-
-    }
   }
 
