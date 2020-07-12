@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:econtribution/constants.dart';
 
+import '../search_news/search.dart';
 import 'MenuList.dart';
 
 

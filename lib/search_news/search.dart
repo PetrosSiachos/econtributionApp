@@ -11,7 +11,6 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: homeAppBar(context),
-      bottomNavigationBar: BottomNavBar(),
       body: new Column(
         children: <Widget>[
           SearchBox(

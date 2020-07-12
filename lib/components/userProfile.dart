@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:econtribution/components/bottom_nav_bar.dart';
 
+import '../Newsappi/main.dart';
+import '../Screens/home/home-screen.dart';
+import '../constants.dart';
+import 'Community.dart';
+
 
 class Profile extends StatefulWidget {
   @override
@@ -12,6 +17,34 @@ class Profile extends StatefulWidget {
 class _MyHomePageState extends State<Profile>
     with SingleTickerProviderStateMixin {
   TabController controller;
+
+  int _selectedIndex = 3;
+  static const TextStyle optionStyle =
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static  List<Widget> _widgetOptions = <Widget>[
+    HomeScreen(),
+    Community(),
+    NewsApp(),
+    Profile(),
+  ];
+
+
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return _widgetOptions[index];
+          },
+        ),
+      );
+
+
+    });
+  }
 
 
   int getColorHexFromStr(String colorStr) {
@@ -177,7 +210,32 @@ class _MyHomePageState extends State<Profile>
           listItemB('Αποσύνδεση', Color(getColorHexFromStr('#ECB800')), Icons.person)
         ])
       ]),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group),
+            title: Text('Community'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info),
+            title: Text('News'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile'),
+            backgroundColor: lightgrey350,
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: green600,
+
+        onTap: _onItemTapped,
+
+      ),
     );
   }
 

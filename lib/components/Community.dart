@@ -2,6 +2,11 @@ import 'package:econtribution/components/bottom_nav_bar.dart';
 import 'package:econtribution/components/category_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:econtribution/Newsappi/main.dart';
+import 'package:econtribution/components/userProfile.dart';
+
+import '../Screens/home/home-screen.dart';
+import '../constants.dart';
 
 class Community extends StatefulWidget {
   @override
@@ -21,12 +26,64 @@ class _HomeState extends State<Community> {
     'assets/images/four.jpg',
     'assets/images/five.jpg',
   ];
+  int _selectedIndex = 1;
+  static const TextStyle optionStyle =
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static  List<Widget> _widgetOptions = <Widget>[
+    HomeScreen(),
+    Community(),
+    NewsApp(),
+    Profile(),
+  ];
+
+
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return _widgetOptions[index];
+          },
+        ),
+      );
+
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group),
+            title: Text('Community'),
+            backgroundColor: lightgrey350,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info),
+            title: Text('News'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile'),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: green600,
+
+        onTap: _onItemTapped,
+
+      ),
       appBar: AppBar(
         title: Text("Κοινότητα"),
         ),
